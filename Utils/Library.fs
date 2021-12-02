@@ -1,5 +1,7 @@
 ﻿namespace Utils
 
-module Say =
-    let hello name =
-        printfn "Hello %s" name
+open System.IO
+
+module ProblemUtils =
+    let readLines filepath = 
+        File.ReadLines(filepath) |> Seq.cast<string>
